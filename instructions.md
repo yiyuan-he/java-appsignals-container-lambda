@@ -284,3 +284,11 @@ The following steps are essential for the `layer.zip` integration to work:
 1. Test your Lambda function with a simple event
 2. If the layer integration is successful, your Lambda will appear in the AppSignals service map
 3. You should see traces and metrics for your Lambda function in the CloudWatch console.
+
+## Troubleshooting Layer Integration
+If AppSignals isn't working:
+  1. Check the function logs for any errors related to the OpenTelemetry instrumentation
+  2. Verify the environment variable `AWS_LAMBDA_EXEC_WRAPPER` is set correctly
+  3. Ensure the layer extraction in the Dockerfile completed successfully
+  4. Confirm the IAM permissions are properly attached
+  5. Increase the Timeout and Memory settings in **General configuration** if needed.

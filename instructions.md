@@ -11,7 +11,7 @@ This document outlines the necessary steps to download the `layer.zip` artifact 
 ## Prerequisites
 - AWS CLI configured with your credentials
 - Docker installed
-- These instructions assumed you are on `x86_64` platform.
+- These instructions assume you are on `x86_64` platform.
 
 ## 1. Set Up Project Structure
 Create a directory for your Lambda function:

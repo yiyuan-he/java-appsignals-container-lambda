@@ -11,14 +11,14 @@ This document outlines the necessary steps to download the `layer.zip` artifact 
 ## Prerequisites
 - AWS CLI configured with your credentials
 - Docker installed
-- These instructions assume you are on `x86_64` platform.
+- These instructions assume you are on `x86_64` platform
 
 ## 1. Set Up Project Structure
 Create a directory for your Lambda function:
 
 ```console
-mkdir java-lambda-function && \
-cd java-lambda-function
+mkdir java-appsignals-container-lambda && \
+cd java-appsignals-container-lambda
 ```
 
 Create a Maven project structure:
@@ -32,11 +32,11 @@ mkdir -p src/main/resources
 
 ### Downloading and Integrating the Layer in Dockerfile
 
-The most crucial step is downloading and integrating the OpenTelemetry Layer with AppSignals support directly in your Dockerfile:
+The most crucial step is downloading and integrating the OpenTelemetry Layer with AppSignals support directly into your Lambda container image.
+
+To do this we create this `Dockerfile`:
 
 ```Dockerfile
-# Dockerfile
-
 FROM public.ecr.aws/lambda/java:21
 
 # Install utilities

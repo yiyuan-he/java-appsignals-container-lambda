@@ -277,7 +277,7 @@ The following steps are essential for the `layer.zip` integration to work:
   - **CloudWatchLambdaApplicationSignalsExecutionRolePolicy** - required for AppSignals
   - Additional policies for your function's operations (e.g., S3 access policy for our example)
 - You may also need to configure your Lambda's Timeout and Memory settings under **General configuration**. In this example we use the following settings:
-  - Timeout: 0 min 15 sec
+  - Timeout: 0 min 10 sec
   - Memory: 512 MB
 
 ## 6. Testing and Verification
